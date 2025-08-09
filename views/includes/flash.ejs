@@ -1,0 +1,26 @@
+<% if(success && success.length) { %>
+
+    <div class="alert alert-primary alert-dismissible fade show col-4 offset-4 text-center fs-5  mt-2" id="flashMessage" role="alert">
+        <%= success %>
+
+            <button type="button" class="btn-close py-2" style="transform: scale(0.6);" data-bs-dismiss="alert" aria-label="Close"></button>
+
+    </div>
+
+
+    <% } %>
+
+
+    <!-- ////////////////// -->
+
+    <% if(error && error.length) { %>
+
+    <div class="alert alert-danger alert-dismissible fade show col-4 offset-4 text-center fs-5 py-1 mt-2" id="flashMessage" role="alert">
+        <%= error %>
+
+        <button type="button" class="btn-close py-2 " style="transform: scale(0.6);" data-bs-dismiss="alert" aria-label="Close"></button>
+
+    </div>
+
+
+    <% } %>
