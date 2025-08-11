@@ -16,9 +16,9 @@ if(!result || result.trim() === ""){
     ]
   });
 
-  if(!listing.country || listing.location){
-    req.flash("error", "No Listing found matching your search.")
-  }
+if (listing.length === 0) {
+  req.flash("error", "No Listing found matching your search.");
+}
 
 
   res.render("listings/index.ejs", { allListings: listing });
