@@ -19,6 +19,7 @@ const User = require("./models/user")
 const listingsRouter = require("./routes/listing")
 const reviewsRouter = require("./routes/reviews")
 const userRouter = require("./routes/user")
+const searchRouter = require("./routes/search")
 
 const dbUrl = process.env.ATLAS_DB
 
@@ -122,6 +123,8 @@ app.use((req, res, next)=>{
 app.use('/listings', listingsRouter);
 app.use('/listings', reviewsRouter);
 app.use("/", userRouter);
+app.use("/",searchRouter)
+
 
 
 
